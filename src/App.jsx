@@ -638,11 +638,11 @@ export default function App() {
                 )}
                 <button
                   onClick={addPlayer}
-                  className="px-4 flex items-center justify-center"
+                  className="px-5 font-bold flex items-center justify-center transition-opacity hover:opacity-90"
                   style={{ background: "#1B2A4A", color: "#FBF0E4" }}
                   aria-label={usesIndividualEntry ? "Add player" : "Add team"}
                 >
-                  <Plus size={18} />
+                  <Plus size={22} strokeWidth={3.5} />
                 </button>
               </div>
 
@@ -834,10 +834,10 @@ function League({ rounds, players, setScore, entrantLabel, isMixer, sittingRound
         {onAddRound && (
           <button
             onClick={onAddRound}
-            className="flex items-center gap-2 px-4 py-2 mt-8 text-sm font-semibold"
+            className="flex items-center gap-2 px-4 py-2 mt-8 text-sm font-bold"
             style={{ border: "2px solid #1B2A4A", color: "#1B2A4A" }}
           >
-            <Plus size={16} /> Add round
+            <Plus size={18} strokeWidth={3} /> Add round
           </button>
         )}
       </div>
