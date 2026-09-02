@@ -617,7 +617,7 @@ export default function App() {
                   onChange={(e) => setPlayerInput(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && (usesIndividualEntry ? addPlayer() : null)}
                   placeholder={usesIndividualEntry ? "Add a player name" : "Player 1 name"}
-                  className="flex-1 px-3 py-2 outline-none"
+                  className="flex-1 px-3.5 py-3 text-base sm:text-sm outline-none"
                   style={{
                     border: "2px solid #1B2A4A",
                     background: "#FFFBF6",
@@ -629,7 +629,7 @@ export default function App() {
                     onChange={(e) => setPartnerInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && addPlayer()}
                     placeholder="Player 2 name"
-                    className="flex-1 px-3 py-2 outline-none"
+                    className="flex-1 px-3.5 py-3 text-base sm:text-sm outline-none"
                     style={{
                       border: "2px solid #1B2A4A",
                       background: "#FFFBF6",
@@ -638,11 +638,11 @@ export default function App() {
                 )}
                 <button
                   onClick={addPlayer}
-                  className="px-5 font-bold flex items-center justify-center transition-opacity hover:opacity-90"
+                  className="px-6 py-3.5 sm:py-0 min-h-[48px] font-bold flex items-center justify-center transition-opacity hover:opacity-90 shrink-0"
                   style={{ background: "#1B2A4A", color: "#FBF0E4" }}
                   aria-label={usesIndividualEntry ? "Add player" : "Add team"}
                 >
-                  <Plus size={22} strokeWidth={3.5} />
+                  <Plus size={18} />
                 </button>
               </div>
 
@@ -834,10 +834,10 @@ function League({ rounds, players, setScore, entrantLabel, isMixer, sittingRound
         {onAddRound && (
           <button
             onClick={onAddRound}
-            className="flex items-center gap-2 px-4 py-2 mt-8 text-sm font-bold"
+            className="flex items-center gap-2 px-4 py-2 mt-8 text-sm font-semibold"
             style={{ border: "2px solid #1B2A4A", color: "#1B2A4A" }}
           >
-            <Plus size={18} strokeWidth={3} /> Add round
+            <Plus size={16} /> Add round
           </button>
         )}
       </div>
